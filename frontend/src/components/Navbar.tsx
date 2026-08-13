@@ -103,7 +103,7 @@ const Navbar = () => {
             {/* Logo */}
             <div className="flex-shrink-0 flex items-center">
               <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="flex flex-col">
-                <img src="/smart_grits_logo.png" alt="SmartGrit Logo" className="h-8 md:h-10 lg:h-12 w-auto object-contain" />
+                <img src="/smart_grits_logo.png" alt="SmartGrits Logo" className="h-8 md:h-10 lg:h-12 w-auto object-contain" />
               </Link>
             </div>
 

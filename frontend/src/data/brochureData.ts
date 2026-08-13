@@ -1,12 +1,12 @@
-// Central data file derived from SmartGrit Brochure - 17-10-22
+// Central data file derived from SmartGrits Brochure - 17-10-22
 // All product data, descriptions, and company info extracted from the official brochure.
 
 export const COMPANY_INFO = {
-  name: 'SmartGrit Polishing System',
+  name: 'SmartGrits Polishing System',
   tagline: 'Grinding Tools · Polishing Tools · Polishing Systems',
   phone: ['+91 73388 82034', '+91 94885 50706'],
-  email: 'info@smartgrit.in',
-  website: 'www.smartgrit.in',
+  email: 'info@SmartGrits.in',
+  website: 'www.SmartGrits.in',
   address: {
     line1: 'No.5, Jayam Industrial Estate,',
     line2: 'Chettyar Agaram 1st Street,',
@@ -21,8 +21,8 @@ export const COMPANY_INFO = {
 };
 
 export const ABOUT_CONTENT = {
-  heading: 'About SmartGrit Polishing System',
-  description: `SmartGrit Polishing System is a joint venture company between Kleanmax, Concrete Polishing Tools Company and EM&TS, Industrial Flooring Consultants.
+  heading: 'About SmartGrits Polishing System',
+  description: `SmartGrits Polishing System is a joint venture company between Kleanmax, Concrete Polishing Tools Company and EM&TS, Industrial Flooring Consultants.
 
 Kleanmax was founded in 2012 primarily as a traditional floor polishing tools manufacturing for Mosaic, Marble & Granite Flooring Industry. We ventured into concrete floor polishing tools making with our vast experience in polishing backed by our R&D. We are positioned to supply and distribute our material in all over India along with technical support.
 
@@ -36,8 +36,8 @@ The idea is to provide optimised concrete polishing system for Industrial Concre
     'On-time, error-free shipments',
     'Prompt, accurate information and answers',
   ],
-  productNote: `SmartGrit products are the result of over 11 years of research and development in abrasive products. This revolutionary technology allows users to achieve an outstanding concrete finish in fewer steps — and therefore at a lower cost — than with traditional finishing methods.`,
-  productMaterial: `SmartGrit concrete grinding & polishing tools are made from a high-quality hard resin bond and qualified diamonds. They deliver excellent result and has a high shine, long life & low cost. It can even be used for both dry and wet polishing.`,
+  productNote: `SmartGrits products are the result of over 11 years of research and development in abrasive products. This revolutionary technology allows users to achieve an outstanding concrete finish in fewer steps — and therefore at a lower cost — than with traditional finishing methods.`,
+  productMaterial: `SmartGrits concrete grinding & polishing tools are made from a high-quality hard resin bond and qualified diamonds. They deliver excellent result and has a high shine, long life & low cost. It can even be used for both dry and wet polishing.`,
 };
 
 export interface Product {
@@ -97,7 +97,7 @@ export const PRODUCTS: Product[] = [
     slug: 'concrete-polishing-system-120cm',
     category: 'Concrete Polishing Systems',
     categorySlug: 'polishing-systems',
-    description: `The 120cm SmartGrit Concrete Polishing System is specially designed for concrete flooring professionals and for industrial use. The system utilizes conventional power trowels — the discs are easily attached, removed and replaced. Place the clip holder, make a small cut in the specially designed pad and pull the clip of the disc through the clip holder. The pad and both parts of the disc are now fixed together. Attach the pad to the floating pan with the velcro attachment system and place it underneath the power trowel and you are ready to begin the process.`,
+    description: `The 120cm SmartGrits Concrete Polishing System is specially designed for concrete flooring professionals and for industrial use. The system utilizes conventional power trowels — the discs are easily attached, removed and replaced. Place the clip holder, make a small cut in the specially designed pad and pull the clip of the disc through the clip holder. The pad and both parts of the disc are now fixed together. Attach the pad to the floating pan with the velcro attachment system and place it underneath the power trowel and you are ready to begin the process.`,
     image: '/brochure-images/WhatsApp Image 2026-07-25 at 11.18.21 AM (1).jpeg',
     gallery: [
       '/brochure-images/WhatsApp Image 2026-07-25 at 11.18.21 AM.jpeg',
@@ -145,7 +145,7 @@ export const PRODUCTS: Product[] = [
     slug: 'concrete-polishing-system-90cm',
     category: 'Concrete Polishing Systems',
     categorySlug: 'polishing-systems',
-    description: 'The 90cm SmartGrit Concrete Polishing System brings the same professional-grade results as our larger models, optimised for mid-size industrial spaces and tighter working areas. Compatible with standard power trowels through the proven velcro attachment system.',
+    description: 'The 90cm SmartGrits Concrete Polishing System brings the same professional-grade results as our larger models, optimised for mid-size industrial spaces and tighter working areas. Compatible with standard power trowels through the proven velcro attachment system.',
     image: '/brochure-images/WhatsApp Image 2026-07-25 at 11.18.24 AM.jpeg',
     features: [
       'Compact 90cm form factor for mid-size areas',
@@ -168,7 +168,7 @@ export const PRODUCTS: Product[] = [
     slug: 'concrete-polishing-system-60cm',
     category: 'Concrete Polishing Systems',
     categorySlug: 'polishing-systems',
-    description: 'The compact 60cm SmartGrit Concrete Polishing System is ideal for smaller commercial spaces, detailed work, and areas requiring precision finishing. Lightweight yet powerful, it delivers the same consistent diamond-quality finish as larger systems.',
+    description: 'The compact 60cm SmartGrits Concrete Polishing System is ideal for smaller commercial spaces, detailed work, and areas requiring precision finishing. Lightweight yet powerful, it delivers the same consistent diamond-quality finish as larger systems.',
     image: '/brochure-images/WhatsApp Image 2026-07-25 at 11.18.22 AM (2).jpeg',
     features: [
       'Compact 60cm — ideal for smaller spaces and detail work',
@@ -189,13 +189,13 @@ export const PRODUCTS: Product[] = [
   // ── Chemicals ─────────────────────────────────────────────────────────────
   {
     id: 'ch-1',
-    name: 'SmartGrit Concrete Densifier',
+    name: 'SmartGrits Concrete Densifier',
     slug: 'concrete-densifier',
     category: 'Chemicals & Densifiers',
     categorySlug: 'chemicals',
     description: `Lithium silicate is a chemical compound used on concrete surfaces to enhance durability, strength, and longevity. When applied to the floor, it penetrates the surface and reacts with free lime particles (through alkali-silica reaction) to help protect the concrete from damage.
 
-SmartGrit densifier and chemical hardener compound is a proprietary, water-based, ready-to-use, clear silicate liquid, formulated with chemically reactive raw materials to harden and dustproof concrete.`,
+SmartGrits densifier and chemical hardener compound is a proprietary, water-based, ready-to-use, clear silicate liquid, formulated with chemically reactive raw materials to harden and dustproof concrete.`,
     image: '/brochure-images/ai_chemical_jug.png',
     gallery: ['/brochure-images/ai_chemical_jug.png'],
     features: [
@@ -216,13 +216,13 @@ SmartGrit densifier and chemical hardener compound is a proprietary, water-based
   },
   {
     id: 'ch-2',
-    name: 'SmartGrit Protecting Sealer',
+    name: 'SmartGrits Protecting Sealer',
     slug: 'protecting-sealer',
     category: 'Chemicals & Densifiers',
     categorySlug: 'chemicals',
     description: `Sealers are a film-forming topical application usually made up of acrylics, epoxies, urethanes, and waxes. Sealers can chip or peel off over time and will usually need to be re-applied.
 
-Depending on your floor goals, requirements, and your Industry, SmartGrit will recommend the best type of sealer for your project. Softer, more porous concrete may require multiple additional coats of sealer.`,
+Depending on your floor goals, requirements, and your Industry, SmartGrits will recommend the best type of sealer for your project. Softer, more porous concrete may require multiple additional coats of sealer.`,
     image: '/brochure-images/ai_chemical_jug.png',
     features: [
       'Film-forming protective topical coating',
@@ -254,7 +254,7 @@ Depending on your floor goals, requirements, and your Industry, SmartGrit will r
       'Walk-behind design for maximum maneuverability',
       'Small grinding head reaches tight corners and edges',
       'Essential companion to larger trowel systems',
-      'Compatible with SmartGrit diamond tools',
+      'Compatible with SmartGrits diamond tools',
     ],
     specifications: {
       'Type': 'Walk Behind Edge Grinder',
@@ -359,12 +359,12 @@ Depending on your floor goals, requirements, and your Industry, SmartGrit will r
       'Protects operator from direct chemical contact',
       'Suitable for densifiers, sealers and other treatments',
       'Backpack design for comfortable extended use',
-      'SmartGrit branded unit available',
+      'SmartGrits branded unit available',
     ],
     specifications: {
       'Type': 'Backpack Chemical Sprayer',
       'Application': 'Densifiers, sealers, cleaning chemicals',
-      'Brand': 'SmartGrit',
+      'Brand': 'SmartGrits',
     },
   },
   {
@@ -441,7 +441,7 @@ The applicator's ergonomic design reduces operator fatigue during large-area app
     slug: 'slurry-wiper-sg36',
     category: 'Machines & Accessories',
     categorySlug: 'accessories',
-    description: `The SmartGrit Slurry Wiper SG-36 is a heavy-duty floor cleaning tool specifically engineered for the removal of concrete slurry generated during wet grinding and polishing operations. Its wide 36-inch blade ensures rapid clearance of large floor areas, significantly reducing cleaning time between polishing steps.
+    description: `The SmartGrits Slurry Wiper SG-36 is a heavy-duty floor cleaning tool specifically engineered for the removal of concrete slurry generated during wet grinding and polishing operations. Its wide 36-inch blade ensures rapid clearance of large floor areas, significantly reducing cleaning time between polishing steps.
 
 The SG-36 features a sharp, industrial-grade rubber blade that creates a firm vacuum seal against the floor surface, effectively channeling slurry into a manageable stream for collection. The robust frame and ergonomic handle provide maximum control and durability across intensive daily use in industrial environments.`,
     image: '/brochure-images/ai_slurry_squeegee.png',
@@ -464,13 +464,13 @@ The SG-36 features a sharp, industrial-grade rubber blade that creates a firm va
   },
   {
     id: 'ac-11',
-    name: 'SmartGrit Toolbox',
+    name: 'SmartGrits Toolbox',
     slug: 'toolbox',
     category: 'Machines & Accessories',
     categorySlug: 'accessories',
-    description: `The SmartGrit Toolbox is a comprehensive, job-site-ready storage and carrying solution designed for concrete polishing professionals. It organizes and protects the essential hand tools, accessories, and small components required across every stage of a concrete polishing project — from surface preparation through final finishing.
+    description: `The SmartGrits Toolbox is a comprehensive, job-site-ready storage and carrying solution designed for concrete polishing professionals. It organizes and protects the essential hand tools, accessories, and small components required across every stage of a concrete polishing project — from surface preparation through final finishing.
 
-Built with heavy-duty materials to withstand the demanding conditions of industrial job sites, the SmartGrit Toolbox keeps your team's critical tools secure, organized, and immediately accessible. Its structured internal layout accommodates diamond tools, applicator accessories, measuring instruments, and maintenance components.`,
+Built with heavy-duty materials to withstand the demanding conditions of industrial job sites, the SmartGrits Toolbox keeps your team's critical tools secure, organized, and immediately accessible. Its structured internal layout accommodates diamond tools, applicator accessories, measuring instruments, and maintenance components.`,
     image: '/brochure-images/ai_toolbox.png',
     gallery: ['/brochure-images/ai_toolbox.png'],
     features: [
@@ -493,7 +493,7 @@ Built with heavy-duty materials to withstand the demanding conditions of industr
     slug: 'microfiber-dry-mop',
     category: 'Machines & Accessories',
     categorySlug: 'accessories',
-    description: `The SmartGrit Microfiber Dry Mop is an essential finishing and maintenance tool for polished concrete floors. Designed for dry application, it efficiently collects fine dust, loose particles, and surface debris without the need for water or chemical agents — making it perfect for both pre-polishing preparation and post-polishing maintenance.
+    description: `The SmartGrits Microfiber Dry Mop is an essential finishing and maintenance tool for polished concrete floors. Designed for dry application, it efficiently collects fine dust, loose particles, and surface debris without the need for water or chemical agents — making it perfect for both pre-polishing preparation and post-polishing maintenance.
 
 The microfiber pad technology generates a static charge that actively attracts and traps fine particles, preventing them from being redistributed across the floor surface. With a surface area several times greater than conventional cotton mops, it covers large industrial floor areas in fewer passes, improving productivity and floor cleanliness.`,
     image: '/brochure-images/ai_microfiber_dry_mop.png',
@@ -577,11 +577,11 @@ The newly formed C-S-H crystals fill microscopic pores and capillary channels wi
     slug: 'concrete-sealer-pro',
     category: 'Chemicals & Densifiers',
     categorySlug: 'chemicals',
-    description: `SmartGrit Concrete Sealer is a high-performance protective treatment designed to safeguard concrete surfaces from moisture, water penetration, oils, chemicals, salts, and other contaminants. By sealing the surface pores or penetrating deep into the concrete structure, it significantly improves durability, reduces maintenance requirements, and extends the service life of concrete floors.
+    description: `SmartGrits Concrete Sealer is a high-performance protective treatment designed to safeguard concrete surfaces from moisture, water penetration, oils, chemicals, salts, and other contaminants. By sealing the surface pores or penetrating deep into the concrete structure, it significantly improves durability, reduces maintenance requirements, and extends the service life of concrete floors.
 
 Concrete sealers help prevent cracking, dusting, staining, efflorescence, spalling, freeze-thaw damage, and chemical deterioration, while maintaining the appearance and structural integrity of the concrete.
 
-SmartGrit offers two main sealer types — Penetrating Sealers (silane, siloxane, lithium silicate) that protect from within without forming a film, and Film-Forming Sealers (acrylic, polyurethane, epoxy) that create a surface coating for superior stain and chemical resistance with an enhanced gloss finish.`,
+SmartGrits offers two main sealer types — Penetrating Sealers (silane, siloxane, lithium silicate) that protect from within without forming a film, and Film-Forming Sealers (acrylic, polyurethane, epoxy) that create a surface coating for superior stain and chemical resistance with an enhanced gloss finish.`,
     image: '/brochure-images/ai_concrete_sealer.png',
     gallery: ['/brochure-images/ai_concrete_sealer.png'],
     features: [
@@ -607,9 +607,9 @@ SmartGrit offers two main sealer types — Penetrating Sealers (silane, siloxane
     slug: 'floor-cleaning-chemical',
     category: 'Chemicals & Densifiers',
     categorySlug: 'chemicals',
-    description: `SmartGrit Concrete Floor Cleaning Chemicals are a professionally formulated range of cleaning agents designed to address the specific types of contamination encountered on industrial and commercial concrete floors. Choosing the correct chemical for the specific type of dirt or stain is essential — routine cleaning requires alkaline or pH-neutral cleaners, grease requires degreasers, and rust or cement smears require mild acid cleaners.
+    description: `SmartGrits Concrete Floor Cleaning Chemicals are a professionally formulated range of cleaning agents designed to address the specific types of contamination encountered on industrial and commercial concrete floors. Choosing the correct chemical for the specific type of dirt or stain is essential — routine cleaning requires alkaline or pH-neutral cleaners, grease requires degreasers, and rust or cement smears require mild acid cleaners.
 
-The SmartGrit range covers all common cleaning requirements for concrete floor maintenance, from daily mopping through to heavy-duty industrial degreasing and stain removal. All formulations are engineered to be safe on sealed and polished concrete surfaces.`,
+The SmartGrits range covers all common cleaning requirements for concrete floor maintenance, from daily mopping through to heavy-duty industrial degreasing and stain removal. All formulations are engineered to be safe on sealed and polished concrete surfaces.`,
     image: '/brochure-images/ai_floor_cleaner.png',
     gallery: ['/brochure-images/ai_floor_cleaner.png'],
     features: [

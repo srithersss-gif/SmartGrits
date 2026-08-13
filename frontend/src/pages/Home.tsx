@@ -166,11 +166,11 @@ const Home = () => {
               <motion.div initial={{ opacity: 0, x: -30, rotateX: 15, z: -50 }} whileInView={{ opacity: 1, x: 0, rotateX: 0, z: 0 }} transition={{ duration: 0.4, type: "spring" }} viewport={{ once: true, margin: "0px" }} style={{ transformStyle: "preserve-3d" }}>
                 <p className="text-primary font-semibold uppercase tracking-widest mb-2 text-xs sm:text-sm">Who We Are</p>
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-dark uppercase tracking-wider mb-4">
-                  SmartGrit Polishing System
+                  SmartGrits Polishing System
                 </h2>
                 <div className="w-24 h-1 bg-primary mb-6"></div>
                 <p className="text-gray-600 leading-relaxed mb-4">
-                  SmartGrit Polishing System is a joint venture between Kleanmax (Concrete Polishing Tools) and EM&TS (Industrial Flooring Consultants). Founded in 2012, we have over 11 years of R&D in abrasive products.
+                  SmartGrits Polishing System is a joint venture between Kleanmax (Concrete Polishing Tools) and EM&TS (Industrial Flooring Consultants). Founded in 2012, we have over 11 years of R&D in abrasive products.
                 </p>
                 <p className="text-gray-600 leading-relaxed mb-6">
                   Our revolutionary technology allows users to achieve an outstanding concrete finish in fewer steps — and at a lower cost — than with traditional finishing methods. We offer Ride On Trowel Wet Polishing Systems for industrial concrete flooring.
@@ -193,7 +193,7 @@ const Home = () => {
                   <div className="absolute inset-0 bg-primary/20 transform translate-x-4 translate-y-4 rounded-3xl -z-10"></div>
                   <img
                     src="/brochure-images/ai_walk_behind_factory.png"
-                    alt="KIA Motors — SmartGrit Polished Concrete Floor"
+                    alt="KIA Motors — SmartGrits Polished Concrete Floor"
                     className="w-full h-64 sm:h-80 lg:h-[550px] object-cover rounded-3xl shadow-[0_30px_60px_-15px_rgba(0,0,0,0.5)] transform hover:scale-[1.02] hover:-rotate-1 transition-all duration-500"
                   />
                 </div>
@@ -203,13 +203,13 @@ const Home = () => {
         </div>
       </ScrollStackSection>
 
-      {/* Why Choose SmartGrit */}
+      {/* Why Choose SmartGrits */}
       <ScrollStackSection index={3} className="bg-gray-50">
         <section className="py-12 md:py-20 w-full">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12 md:mb-16">
               <p className="text-primary font-semibold uppercase tracking-widest mb-2 text-xs sm:text-sm">Our Edge</p>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-dark uppercase tracking-wider mb-4">Why Choose SmartGrit</h2>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-dark uppercase tracking-wider mb-4">Why Choose SmartGrits</h2>
               <div className="w-24 h-1 bg-primary mx-auto"></div>
             </div>
 

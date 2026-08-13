@@ -76,7 +76,7 @@ const Products = () => {
     <div className="bg-gray-50 min-h-screen">
       <div className="relative bg-dark text-white pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden rounded-b-[3rem] mb-8 md:mb-12 shadow-2xl">
         <div className="absolute inset-0">
-          <img src="/brochure-images/products_engineer_bg.png" alt="SmartGrit Products" className="w-full h-full object-cover opacity-30" />
+          <img src="/brochure-images/products_engineer_bg.png" alt="SmartGrits Products" className="w-full h-full object-cover opacity-30" />
           <div className="absolute inset-0 bg-gradient-to-r from-dark via-dark/80 to-transparent"></div>
           <div className="absolute inset-0 bg-gradient-to-t from-dark/90 via-transparent to-transparent"></div>
         </div>
@@ -84,7 +84,7 @@ const Products = () => {
           <motion.div initial={{ opacity: 0, x: -30, rotateX: 15, z: -50 }} animate={{ opacity: 1, x: 0, rotateX: 0, z: 0 }} transition={{ duration: 0.4, type: "spring", bounce: 0.4 }} className="max-w-3xl" style={{ transformStyle: "preserve-3d" }}>
             <div className="inline-flex items-center gap-2 px-5 py-2 bg-primary/20 border border-primary/50 text-primary text-xs sm:text-sm font-bold tracking-widest uppercase mb-6 rounded-full shadow-[0_0_20px_rgba(34,197,94,0.3)] backdrop-blur-sm">
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-              SmartGrit Product Range
+              SmartGrits Product Range
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-7xl font-black uppercase tracking-wider mb-6 drop-shadow-2xl leading-tight">Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-green-300">Products</span></h1>
             <p className="text-gray-300 text-lg md:text-xl leading-relaxed font-medium drop-shadow-lg max-w-2xl">

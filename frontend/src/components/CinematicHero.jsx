@@ -199,7 +199,7 @@ function CompanyLogo3D({ mouse, revealed }) {
         letterSpacing={0.15}
         castShadow
       >
-        SMARTGRIT
+        SmartGrits
         <meshStandardMaterial 
           color="#ffffff" 
           emissive="#22c55e" 

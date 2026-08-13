@@ -93,7 +93,7 @@ router.post('/', async (req, res) => {
     const mailOptions = {
       // 'from' MUST be the SMTP user's address for deliverability
       from: `"SmartGrits Website" <${process.env.SMTP_USER}>`,
-      to: process.env.ADMIN_EMAIL || 'info@smartgrit.in',
+      to: process.env.ADMIN_EMAIL || 'info@SmartGrits.in',
       replyTo: email, // Reply goes directly to the visitor
       subject: `New Website Inquiry: ${subject}`,
       html: `

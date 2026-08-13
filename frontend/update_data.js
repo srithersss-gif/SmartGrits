@@ -101,7 +101,7 @@ content = content.replace(
     slug: 'slurry-wiper-sg36',
     category: 'Machines & Accessories',
     categorySlug: 'accessories',
-    description: 'The Smart Grits SG-36 Heavy-Duty Slurry Recovery Rubber Squeegee is specially engineered for the efficient collection and recovery of slurry generated during concrete grinding, polishing, wet diamond grinding, and stone surface treatment.',
+    description: 'The SmartGrits SG-36 Heavy-Duty Slurry Recovery Rubber Squeegee is specially engineered for the efficient collection and recovery of slurry generated during concrete grinding, polishing, wet diamond grinding, and stone surface treatment.',
     image: '/brochure-images/ai_slurry_squeegee.png',
     features: [
       'Specially designed for professional slurry recovery',
@@ -126,7 +126,7 @@ content = content.replace(
     slug: 'chemical-applicator',
     category: 'Machines & Accessories',
     categorySlug: 'accessories',
-    description: 'The SMART GRITS Floor Chemical Application Machine is a rugged, high-performance machine designed for the fast, precise, and uniform application of floor finishes, concrete densifiers, hardeners, and sealers. It provides a significantly faster alternative to conventional mop-and-bucket application methods.',
+    description: 'The SmartGrits Floor Chemical Application Machine is a rugged, high-performance machine designed for the fast, precise, and uniform application of floor finishes, concrete densifiers, hardeners, and sealers. It provides a significantly faster alternative to conventional mop-and-bucket application methods.',
     image: '/brochure-images/ai_chemical_applicator.png',
     features: [
       'High Productivity up to 35,000 sq. ft./hour',
@@ -138,7 +138,7 @@ content = content.replace(
     specifications: {
       'Type': 'Professional Floor Chemical Application Machine',
       'Widths': 'Available in 24-inch and 36-inch',
-      'Productivity': 'Up to 35,000 sq. ft./hour (3,252 m²/hour)',
+      'Productivity': 'Up to 35,000 sq. ft./hour (3,252 mï¿½/hour)',
     },
   }\
 );
@@ -151,7 +151,7 @@ content = content.replace(
     slug: 'microfiber-dry-mop',
     category: 'Machines & Accessories',
     categorySlug: 'accessories',
-    description: 'The Smart Grits Microfiber Chemical Application Mop is specially designed for the professional application of concrete floor treatment chemicals. Made with high-quality microfiber material, it helps spread chemical solutions smoothly and uniformly across concrete floor surfaces.',
+    description: 'The SmartGrits Microfiber Chemical Application Mop is specially designed for the professional application of concrete floor treatment chemicals. Made with high-quality microfiber material, it helps spread chemical solutions smoothly and uniformly across concrete floor surfaces.',
     image: '/brochure-images/ai_microfiber_dry_mop.png',
     features: [
       'High-Quality reusable Microfiber Mop',

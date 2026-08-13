@@ -30,7 +30,7 @@ const PRODUCTS = [
     name: 'Concrete Polishing System — 120cm',
     slug: 'concrete-polishing-system-120cm',
     categorySlug: 'polishing-systems',
-    description: 'The 120cm SmartGrit Concrete Polishing System is specially designed for concrete flooring professionals and for industrial use.',
+    description: 'The 120cm SmartGrits Concrete Polishing System is specially designed for concrete flooring professionals and for industrial use.',
     image_url: '/brochure-images/WhatsApp Image 2026-07-25 at 11.18.21 AM (1).jpeg',
     features: [
       'Power trowel application (Ride On / Walk Behind)',
@@ -42,7 +42,7 @@ const PRODUCTS = [
     name: 'Concrete Polishing System — 90cm',
     slug: 'concrete-polishing-system-90cm',
     categorySlug: 'polishing-systems',
-    description: 'The 90cm SmartGrit Concrete Polishing System brings the same professional-grade results as our larger models, optimised for mid-size industrial spaces.',
+    description: 'The 90cm SmartGrits Concrete Polishing System brings the same professional-grade results as our larger models, optimised for mid-size industrial spaces.',
     image_url: '/brochure-images/WhatsApp Image 2026-07-25 at 11.18.24 AM.jpeg',
     features: [
       'Compact 90cm form factor for mid-size areas',
@@ -54,7 +54,7 @@ const PRODUCTS = [
     name: 'Concrete Polishing System — 60cm',
     slug: 'concrete-polishing-system-60cm',
     categorySlug: 'polishing-systems',
-    description: 'The compact 60cm SmartGrit Concrete Polishing System is ideal for smaller commercial spaces, detailed work, and areas requiring precision finishing.',
+    description: 'The compact 60cm SmartGrits Concrete Polishing System is ideal for smaller commercial spaces, detailed work, and areas requiring precision finishing.',
     image_url: '/brochure-images/WhatsApp Image 2026-07-25 at 11.18.22 AM (2).jpeg',
     features: [
       'Compact 60cm — ideal for smaller spaces and detail work',
@@ -63,7 +63,7 @@ const PRODUCTS = [
     ]
   },
   {
-    name: 'SmartGrit Concrete Densifier',
+    name: 'SmartGrits Concrete Densifier',
     slug: 'concrete-densifier',
     categorySlug: 'chemicals',
     description: 'Lithium silicate is a chemical compound used on concrete surfaces to enhance durability, strength, and longevity.',
@@ -75,7 +75,7 @@ const PRODUCTS = [
     ]
   },
   {
-    name: 'SmartGrit Protecting Sealer',
+    name: 'SmartGrits Protecting Sealer',
     slug: 'protecting-sealer',
     categorySlug: 'chemicals',
     description: 'Sealers are a film-forming topical application usually made up of acrylics, epoxies, urethanes, and waxes.',

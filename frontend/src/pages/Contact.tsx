@@ -96,7 +96,7 @@ const Contact = () => {
               <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/10 transition-colors duration-500 pointer-events-none"></div>
               <h3 className="text-2xl font-black text-dark mb-8 uppercase tracking-wider flex items-center gap-3 relative z-10">
                 <span className="w-2 h-8 bg-primary rounded-full"></span>
-                SmartGrit Polishing System
+                SmartGrits Polishing System
               </h3>
               <div className="space-y-8 relative z-10">
                 <div className="flex items-start gap-5 group/item">

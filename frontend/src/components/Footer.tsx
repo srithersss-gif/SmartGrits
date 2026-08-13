@@ -9,7 +9,7 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <Link to="/" className="mb-6 block bg-white p-2 inline-block rounded max-w-fit">
-              <img src="/smart_grits_logo.png" alt="SmartGrit Logo" className="h-10 w-auto object-contain" />
+              <img src="/smart_grits_logo.png" alt="SmartGrits Logo" className="h-10 w-auto object-contain" />
             </Link>
             <p className="text-gray-400 leading-relaxed mb-6">
               Premium Industrial Concrete Grinding & Polishing Solutions for global manufacturing and construction needs.
@@ -61,7 +61,7 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
-          <p>&copy; {new Date().getFullYear()} SmartGrit Industrial Solutions. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} SmartGrits Industrial Solutions. All rights reserved.</p>
         </div>
       </div>
     </footer>

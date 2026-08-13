@@ -11,14 +11,14 @@ const About = () => {
         <div className="absolute inset-0">
           <img
             src="/brochure-images/ai_walk_behind_factory.png"
-            alt="SmartGrit Industrial Polishing"
+            alt="SmartGrits Industrial Polishing"
             className="w-full h-full object-cover opacity-20"
           />
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-16 md:pt-40 md:pb-24">
           <motion.div initial={{ opacity: 0, y: 50, rotateX: 20, z: -100 }} animate={{ opacity: 1, y: 0, rotateX: 0, z: 0 }} transition={{ duration: 0.4, type: "spring", bounce: 0.4 }} style={{ transformStyle: "preserve-3d" }}>
             <p className="text-primary font-semibold uppercase tracking-widest mb-2 text-xs sm:text-sm">Who We Are</p>
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold uppercase tracking-wider mb-4">About SmartGrit</h1>
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold uppercase tracking-wider mb-4">About SmartGrits</h1>
             <div className="w-24 h-1 bg-primary mb-6"></div>
             <p className="text-gray-300 max-w-2xl text-lg">
               Over 11 years of R&D in abrasive products. Industrial concrete floor polishing systems made in India.
@@ -32,11 +32,11 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <motion.div initial={{ opacity: 0, x: -30, rotateX: 15, z: -50 }} whileInView={{ opacity: 1, x: 0, rotateX: 0, z: 0 }} transition={{ duration: 0.4, type: "spring" }} viewport={{ once: true, margin: "0px" }} style={{ transformStyle: "preserve-3d" }}>
             <p className="text-primary font-semibold uppercase tracking-widest mb-2 text-xs sm:text-sm">Our Story</p>
-            <h2 className="text-2xl sm:text-3xl font-bold text-dark uppercase mb-4">SmartGrit Polishing System</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold text-dark uppercase mb-4">SmartGrits Polishing System</h2>
             <div className="w-16 h-1 bg-primary mb-6"></div>
             <div className="space-y-4 text-gray-600 leading-relaxed">
               <p>
-                SmartGrit Polishing System is a joint venture company between <strong>Kleanmax</strong>, a concrete polishing tools company, and <strong>EM&TS</strong>, industrial flooring consultants.
+                SmartGrits Polishing System is a joint venture company between <strong>Kleanmax</strong>, a concrete polishing tools company, and <strong>EM&TS</strong>, industrial flooring consultants.
               </p>
               <p>
                 Kleanmax was founded in 2012 primarily as a traditional floor polishing tools manufacturer for Mosaic, Marble &amp; Granite Flooring Industry. We ventured into concrete floor polishing tools making with our vast experience in polishing backed by our R&D.
@@ -53,7 +53,7 @@ const About = () => {
           <motion.div initial={{ opacity: 0, x: 30, rotateY: 15, z: -50 }} whileInView={{ opacity: 1, x: 0, rotateY: 0, z: 0 }} transition={{ duration: 0.4, type: "spring" }} viewport={{ once: true, margin: "0px" }} className="relative transform-gpu" style={{ transformStyle: "preserve-3d" }}>
             <img
               src="/brochure-images/ai_ride_on_factory.png"
-              alt="SmartGrit Polishing in Action — Peekay Steels"
+              alt="SmartGrits Polishing in Action — Peekay Steels"
               className="w-full h-64 sm:h-80 lg:h-[400px] object-cover object-center shadow-[0_20px_40px_-10px_rgba(0,0,0,0.3)] rounded-2xl"
             />
             <div className="absolute -bottom-6 -left-6 bg-primary text-white p-6 shadow-lg">
@@ -68,7 +68,7 @@ const About = () => {
       <section className="py-12 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 md:mb-14">
-            <p className="text-primary font-semibold uppercase tracking-widest mb-2 text-xs sm:text-sm">Why Choose SmartGrit</p>
+            <p className="text-primary font-semibold uppercase tracking-widest mb-2 text-xs sm:text-sm">Why Choose SmartGrits</p>
             <h2 className="text-2xl sm:text-3xl font-bold text-dark uppercase">Our Promise to You</h2>
             <div className="w-16 h-1 bg-primary mx-auto mt-4"></div>
           </div>
@@ -117,12 +117,12 @@ const About = () => {
       <section className="py-12 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <motion.div initial={{ opacity: 0, x: -30, rotateY: -15, z: -50 }} whileInView={{ opacity: 1, x: 0, rotateY: 0, z: 0 }} transition={{ duration: 0.4, type: "spring" }} viewport={{ once: true, margin: "0px" }} style={{ transformStyle: "preserve-3d" }}>
-            <img src="/brochure-images/WhatsApp Image 2026-07-25 at 11.18.21 AM (1).jpeg" alt="SmartGrit Polishing System Discs" className="w-full h-64 sm:h-80 lg:h-[450px] object-cover object-center shadow-[0_20px_40px_-10px_rgba(0,0,0,0.3)] rounded-2xl" />
+            <img src="/brochure-images/WhatsApp Image 2026-07-25 at 11.18.21 AM (1).jpeg" alt="SmartGrits Polishing System Discs" className="w-full h-64 sm:h-80 lg:h-[450px] object-cover object-center shadow-[0_20px_40px_-10px_rgba(0,0,0,0.3)] rounded-2xl" />
           </motion.div>
 
           <motion.div initial={{ opacity: 0, x: 30, rotateX: 15, z: -50 }} whileInView={{ opacity: 1, x: 0, rotateX: 0, z: 0 }} transition={{ duration: 0.4, type: "spring" }} viewport={{ once: true, margin: "0px" }} style={{ transformStyle: "preserve-3d" }}>
             <p className="text-primary font-semibold uppercase tracking-widest mb-2 text-xs sm:text-sm">Product Technology</p>
-            <h2 className="text-2xl sm:text-3xl font-bold text-dark uppercase mb-4">SmartGrit Diamond Tools</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold text-dark uppercase mb-4">SmartGrits Diamond Tools</h2>
             <div className="w-16 h-1 bg-primary mb-6"></div>
             <p className="text-gray-600 leading-relaxed mb-4">{ABOUT_CONTENT.productNote}</p>
             <p className="text-gray-600 leading-relaxed mb-6">{ABOUT_CONTENT.productMaterial}</p>

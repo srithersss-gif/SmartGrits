@@ -130,11 +130,11 @@ router.post('/', async (req, res) => {
       const mailOptions = {
         // 'from' MUST be the SMTP user's address for deliverability
         from: `"SmartGrits Website" <${process.env.SMTP_USER}>`,
-        to: process.env.ADMIN_EMAIL || 'info@smartgrit.in',
+        to: process.env.ADMIN_EMAIL || 'info@SmartGrits.in',
         replyTo: email,
         subject: `New Quote Request from ${fullName}`,
         text: `
-You have received a new quote request from the SmartGrit Website.
+You have received a new quote request from the SmartGrits Website.
 
 Name: ${fullName}
 Company: ${companyName || 'N/A'}

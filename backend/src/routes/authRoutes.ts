@@ -8,7 +8,7 @@ router.post('/login', (req, res) => {
 
   // Hardcoded admin credentials as requested
   const ADMIN_EMAIL = 'info@smartgrits.com';
-  const ADMIN_PASS = 'grits2026';
+  const ADMIN_PASS = 'Kleanmax@10l';
 
   if (email === ADMIN_EMAIL && password === ADMIN_PASS) {
     const secret = process.env.JWT_SECRET || 'fallback-secret-for-development';

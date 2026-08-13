@@ -47,7 +47,7 @@ app.use('/api/contact', contactRoutes);
 app.use('/api/auth', authRoutes);
 
 app.get('/', (req: Request, res: Response) => {
-  res.send('SmartGrit API is running');
+  res.send('SmartGrits API is running');
 });
 
 const numCPUs = os.cpus().length;

@@ -40,7 +40,7 @@ const AdminLayout = () => {
         <div className="p-6 flex justify-between items-center">
           <div>
             <div className="bg-white p-2 rounded max-w-fit mb-1">
-              <img src="/smart_grits_logo.png" alt="SmartGrit Logo" className="h-8 w-auto object-contain" />
+              <img src="/smart_grits_logo.png" alt="SmartGrits Logo" className="h-8 w-auto object-contain" />
             </div>
             <p className="text-xs text-gray-400 mt-1">Admin Dashboard</p>
           </div>

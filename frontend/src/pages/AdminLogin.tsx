@@ -73,7 +73,7 @@ const AdminLogin = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors"
-              placeholder="admin@smartgrits.com"
+              placeholder="info@smartgrits.com"
               required
             />
           </div>
