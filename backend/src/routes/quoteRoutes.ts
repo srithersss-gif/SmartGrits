@@ -115,7 +115,8 @@ router.post('/', async (req, res) => {
       console.error('Failed to add quote inquiry to customers CRM:', dbError);
     }
 
-    // Send Email Notification
+    // Send Email Notification (SKIPPED as per request)
+    /*
     try {
       const transporter = nodemailer.createTransport({
         host: process.env.SMTP_HOST || 'smtp.gmail.com',
@@ -157,6 +158,7 @@ Please check the Admin Dashboard Quotes section for product details.
     } catch (emailError) {
       console.error('Failed to send quote notification email:', emailError);
     }
+    */
 
     res.status(201).json({ success: true, quoteId });
 

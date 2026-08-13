@@ -78,7 +78,8 @@ router.post('/', async (req, res) => {
     }
   }
 
-  // 3. Send email notification to admin
+  // 3. Send email notification to admin (SKIPPED as per request)
+  /*
   try {
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST || 'smtp.gmail.com',
@@ -91,10 +92,9 @@ router.post('/', async (req, res) => {
     });
 
     const mailOptions = {
-      // 'from' MUST be the SMTP user's address for deliverability
       from: `"SmartGrits Website" <${process.env.SMTP_USER}>`,
       to: process.env.ADMIN_EMAIL || 'info@SmartGrits.in',
-      replyTo: email, // Reply goes directly to the visitor
+      replyTo: email,
       subject: `New Website Inquiry: ${subject}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #e0e0e0; border-radius: 8px;">
@@ -123,6 +123,24 @@ router.post('/', async (req, res) => {
     }
   } catch (emailError: any) {
     console.error('Failed to send contact notification email:', emailError.message);
+  }
+  */
+
+  // 4. Send to Google Sheets via Apps Script Webhook
+  try {
+    if (process.env.GOOGLE_SCRIPT_URL) {
+      const response = await fetch(process.env.GOOGLE_SCRIPT_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ firstName, lastName, company, email, phone, subject, message }),
+      });
+      const responseText = await response.text();
+      console.log('Google Sheets Response:', response.status, responseText);
+    } else {
+      console.warn('GOOGLE_SCRIPT_URL not configured. Skipping Google Sheets integration.');
+    }
+  } catch (sheetsError: any) {
+    console.error('Failed to send contact details to Google Sheets:', sheetsError.message);
   }
 
   res.status(200).json({ success: true, message: 'Your message has been received!' });
