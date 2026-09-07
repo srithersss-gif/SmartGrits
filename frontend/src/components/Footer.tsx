@@ -34,8 +34,8 @@ const Footer = () => {
               <li>{COMPANY_INFO.address.line2}</li>
               <li>{COMPANY_INFO.address.line3}</li>
               <li>{COMPANY_INFO.address.city}, {COMPANY_INFO.address.state} - {COMPANY_INFO.address.pincode}</li>
-              <li>Phone: {COMPANY_INFO.phone.join(' / ')}</li>
-              <li>Email: {COMPANY_INFO.email}</li>
+              <li>Phone: <a href={`tel:${COMPANY_INFO.phone[0].replace(/\s/g, '')}`} className="hover:text-primary transition-colors">{COMPANY_INFO.phone.join(' / ')}</a></li>
+              <li>Email: <a href={`mailto:${COMPANY_INFO.email}`} className="hover:text-primary transition-colors">{COMPANY_INFO.email}</a></li>
             </ul>
           </div>
           

@@ -5,8 +5,8 @@ export const COMPANY_INFO = {
   name: 'SmartGrits Polishing System',
   tagline: 'Grinding Tools · Polishing Tools · Polishing Systems',
   phone: ['+91 73388 82034'],
-  email: 'info@SmartGrits.in',
-  website: 'www.SmartGrits.in',
+  email: 'info@smartgrits.com',
+  website: 'www.smartgrits.com',
   address: {
     line1: 'No.5, Jayam Industrial Estate,',
     line2: 'Chettyar Agaram 1st Street,',
