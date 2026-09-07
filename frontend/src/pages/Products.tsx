@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Search, ChevronRight } from 'lucide-react';
+import { Search, ChevronRight, ChevronLeft } from 'lucide-react';
 import { PRODUCTS as STATIC_PRODUCTS, CATEGORIES as STATIC_CATEGORIES } from '../data/brochureData';
 
 interface DbProduct {
@@ -72,6 +72,100 @@ const Products = () => {
     return matchesCategory && matchesSearch;
   });
 
+  // Category filter horizontal scrolling logic
+  const categoryScrollRef = useRef<HTMLDivElement>(null);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(false);
+
+  const updateScrollButtons = () => {
+    const el = categoryScrollRef.current;
+    if (el) {
+      setCanScrollLeft(el.scrollLeft > 6);
+      setCanScrollRight(el.scrollLeft < el.scrollWidth - el.clientWidth - 6);
+    }
+  };
+
+  useEffect(() => {
+    updateScrollButtons();
+    const el = categoryScrollRef.current;
+    if (!el) return;
+
+    // Attach non-passive wheel listener so vertical mouse-wheel scrolls horizontally
+    const onWheel = (e: WheelEvent) => {
+      if (el.scrollWidth > el.clientWidth && e.deltaY !== 0) {
+        e.preventDefault();
+        el.scrollLeft += e.deltaY;
+        updateScrollButtons();
+      }
+    };
+
+    el.addEventListener('wheel', onWheel, { passive: false });
+    window.addEventListener('resize', updateScrollButtons);
+
+    const timer = setTimeout(updateScrollButtons, 150);
+
+    return () => {
+      el.removeEventListener('wheel', onWheel);
+      window.removeEventListener('resize', updateScrollButtons);
+      clearTimeout(timer);
+    };
+  }, []);
+
+  // Auto-scroll active category tab into view
+  useEffect(() => {
+    const el = categoryScrollRef.current;
+    if (!el) return;
+    const activeEl = el.querySelector('[data-active="true"]') as HTMLElement | null;
+    if (activeEl) {
+      activeEl.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      setTimeout(updateScrollButtons, 300);
+    }
+  }, [activeCategory]);
+
+  const scrollFilters = (direction: 'left' | 'right') => {
+    const el = categoryScrollRef.current;
+    if (!el) return;
+    const scrollAmount = 260;
+    el.scrollBy({
+      left: direction === 'left' ? -scrollAmount : scrollAmount,
+      behavior: 'smooth',
+    });
+    setTimeout(updateScrollButtons, 350);
+  };
+
+  // Drag-to-scroll support for desktop mouse users
+  const isDraggingRef = useRef(false);
+  const startXRef = useRef(0);
+  const startScrollLeftRef = useRef(0);
+  const hasDraggedRef = useRef(false);
+
+  const handleMouseDown = (e: React.MouseEvent) => {
+    const el = categoryScrollRef.current;
+    if (!el) return;
+    isDraggingRef.current = true;
+    hasDraggedRef.current = false;
+    startXRef.current = e.pageX - el.offsetLeft;
+    startScrollLeftRef.current = el.scrollLeft;
+  };
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!isDraggingRef.current) return;
+    const el = categoryScrollRef.current;
+    if (!el) return;
+    e.preventDefault();
+    const x = e.pageX - el.offsetLeft;
+    const walk = x - startXRef.current;
+    if (Math.abs(walk) > 5) {
+      hasDraggedRef.current = true;
+    }
+    el.scrollLeft = startScrollLeftRef.current - walk;
+    updateScrollButtons();
+  };
+
+  const handleMouseUpOrLeave = () => {
+    isDraggingRef.current = false;
+  };
+
   return (
     <div className="bg-gray-50 min-h-screen">
       <div className="relative bg-dark text-white pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden rounded-b-[3rem] mb-8 md:mb-12 shadow-2xl">
@@ -110,28 +204,78 @@ const Products = () => {
           </div>
 
           {/* Category tabs */}
-          <div className="flex w-full lg:w-2/3 gap-3 items-center bg-white p-2 rounded-2xl shadow-[0_10px_30px_-15px_rgba(0,0,0,0.1)] border-2 border-gray-100 overflow-x-auto no-scrollbar scroll-smooth">
-            <button
-              onClick={() => {
-                setActiveCategory('all');
-                setSearchParams({});
-              }}
-              className={`whitespace-nowrap flex-shrink-0 px-5 sm:px-6 py-2.5 sm:py-3.5 rounded-xl text-xs sm:text-sm font-black uppercase tracking-widest transition-all duration-300 ${activeCategory === 'all' ? 'bg-dark text-primary shadow-lg' : 'bg-transparent text-gray-500 hover:text-dark hover:bg-gray-50'}`}
-            >
-              All
-            </button>
-            {allCategories.map((cat) => (
+          <div className="relative flex items-center w-full lg:w-2/3 group/cat">
+            {/* Left Scroll Arrow */}
+            {canScrollLeft && (
               <button
-                key={cat.id}
-                onClick={() => {
-                  setActiveCategory(cat.slug);
-                  setSearchParams({ category: cat.slug });
-                }}
-                className={`whitespace-nowrap flex-shrink-0 px-5 sm:px-6 py-2.5 sm:py-3.5 rounded-xl text-xs sm:text-sm font-black uppercase tracking-widest transition-all duration-300 ${activeCategory === cat.slug ? 'bg-dark text-primary shadow-lg' : 'bg-transparent text-gray-500 hover:text-dark hover:bg-gray-50'}`}
+                type="button"
+                onClick={() => scrollFilters('left')}
+                aria-label="Scroll categories left"
+                className="absolute left-2 z-20 w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center rounded-xl bg-white/95 text-dark shadow-md border border-gray-200 hover:bg-dark hover:text-primary transition-all duration-200"
               >
-                {cat.name}
+                <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5" />
               </button>
-            ))}
+            )}
+
+            {/* Left gradient indicator */}
+            {canScrollLeft && (
+              <div className="absolute left-0 top-0 bottom-0 w-10 pointer-events-none bg-gradient-to-r from-white via-white/80 to-transparent z-10 rounded-l-2xl" />
+            )}
+
+            {/* Scrollable category tabs */}
+            <div
+              ref={categoryScrollRef}
+              data-lenis-prevent
+              onScroll={updateScrollButtons}
+              onMouseDown={handleMouseDown}
+              onMouseMove={handleMouseMove}
+              onMouseUp={handleMouseUpOrLeave}
+              onMouseLeave={handleMouseUpOrLeave}
+              className="flex w-full gap-3 items-center bg-white p-2 rounded-2xl shadow-[0_10px_30px_-15px_rgba(0,0,0,0.1)] border-2 border-gray-100 overflow-x-auto no-scrollbar scroll-smooth cursor-grab active:cursor-grabbing select-none"
+            >
+              <button
+                data-active={activeCategory === 'all'}
+                onClick={() => {
+                  if (hasDraggedRef.current) return;
+                  setActiveCategory('all');
+                  setSearchParams({});
+                }}
+                className={`whitespace-nowrap flex-shrink-0 px-5 sm:px-6 py-2.5 sm:py-3.5 rounded-xl text-xs sm:text-sm font-black uppercase tracking-widest transition-all duration-300 ${activeCategory === 'all' ? 'bg-dark text-primary shadow-lg' : 'bg-transparent text-gray-500 hover:text-dark hover:bg-gray-50'}`}
+              >
+                All
+              </button>
+              {allCategories.map((cat) => (
+                <button
+                  key={cat.id}
+                  data-active={activeCategory === cat.slug}
+                  onClick={() => {
+                    if (hasDraggedRef.current) return;
+                    setActiveCategory(cat.slug);
+                    setSearchParams({ category: cat.slug });
+                  }}
+                  className={`whitespace-nowrap flex-shrink-0 px-5 sm:px-6 py-2.5 sm:py-3.5 rounded-xl text-xs sm:text-sm font-black uppercase tracking-widest transition-all duration-300 ${activeCategory === cat.slug ? 'bg-dark text-primary shadow-lg' : 'bg-transparent text-gray-500 hover:text-dark hover:bg-gray-50'}`}
+                >
+                  {cat.name}
+                </button>
+              ))}
+            </div>
+
+            {/* Right gradient indicator */}
+            {canScrollRight && (
+              <div className="absolute right-0 top-0 bottom-0 w-10 pointer-events-none bg-gradient-to-l from-white via-white/80 to-transparent z-10 rounded-r-2xl" />
+            )}
+
+            {/* Right Scroll Arrow */}
+            {canScrollRight && (
+              <button
+                type="button"
+                onClick={() => scrollFilters('right')}
+                aria-label="Scroll categories right"
+                className="absolute right-2 z-20 w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center rounded-xl bg-white/95 text-dark shadow-md border border-gray-200 hover:bg-dark hover:text-primary transition-all duration-200"
+              >
+                <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5" />
+              </button>
+            )}
           </div>
         </div>
 

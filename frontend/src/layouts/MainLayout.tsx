@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import Lenis from 'lenis';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import WhatsAppButton from '../components/WhatsAppButton';
 // @ts-ignore
 import TargetCursor from '../components/TargetCursor';
 
@@ -40,6 +41,7 @@ const MainLayout = () => {
         <Outlet />
       </main>
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 };

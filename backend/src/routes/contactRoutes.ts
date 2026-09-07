@@ -1,7 +1,7 @@
 import { Router } from 'express';
-import nodemailer from 'nodemailer';
 import { supabase } from '../config/supabase';
 import { requireAuth } from '../middlewares/authMiddleware';
+import { sendContactNotificationEmail } from '../services/emailService';
 
 const router = Router();
 
@@ -78,53 +78,20 @@ router.post('/', async (req, res) => {
     }
   }
 
-  // 3. Send email notification to admin (SKIPPED as per request)
-  /*
+  // 3. Send email notification to info@smartgrits.com via Hostinger Mail API
   try {
-    const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST || 'smtp.gmail.com',
-      port: Number(process.env.SMTP_PORT) || 587,
-      secure: Number(process.env.SMTP_PORT) === 465,
-      auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS,
-      },
+    await sendContactNotificationEmail({
+      firstName,
+      lastName,
+      company,
+      email,
+      phone,
+      subject,
+      message,
     });
-
-    const mailOptions = {
-      from: `"SmartGrits Website" <${process.env.SMTP_USER}>`,
-      to: process.env.ADMIN_EMAIL || 'info@SmartGrits.in',
-      replyTo: email,
-      subject: `New Website Inquiry: ${subject}`,
-      html: `
-        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #e0e0e0; border-radius: 8px;">
-          <h2 style="color: #16a34a; border-bottom: 2px solid #16a34a; padding-bottom: 10px;">New Contact Form Submission</h2>
-          <table style="width: 100%; border-collapse: collapse;">
-            <tr><td style="padding: 8px; font-weight: bold; width: 120px;">Name:</td><td style="padding: 8px;">${firstName} ${lastName}</td></tr>
-            <tr style="background: #f9f9f9;"><td style="padding: 8px; font-weight: bold;">Company:</td><td style="padding: 8px;">${company || 'N/A'}</td></tr>
-            <tr><td style="padding: 8px; font-weight: bold;">Email:</td><td style="padding: 8px;"><a href="mailto:${email}">${email}</a></td></tr>
-            <tr style="background: #f9f9f9;"><td style="padding: 8px; font-weight: bold;">Phone:</td><td style="padding: 8px;">${phone || 'N/A'}</td></tr>
-            <tr><td style="padding: 8px; font-weight: bold;">Subject:</td><td style="padding: 8px;">${subject}</td></tr>
-          </table>
-          <div style="margin-top: 16px; padding: 12px; background: #f0fdf4; border-left: 4px solid #16a34a; border-radius: 4px;">
-            <strong>Message:</strong>
-            <p style="margin: 8px 0 0; white-space: pre-wrap;">${message}</p>
-          </div>
-          <p style="margin-top: 20px; font-size: 12px; color: #888;">You can reply directly to this email to respond to the visitor. View full details in your <a href="http://localhost:5173/admin/contacts">Admin Dashboard</a>.</p>
-        </div>
-      `,
-    };
-
-    if (!process.env.SMTP_USER || !process.env.SMTP_PASS) {
-      console.warn('SMTP credentials not configured. Email not sent.');
-    } else {
-      await transporter.sendMail(mailOptions);
-      console.log(`Contact notification sent to ${process.env.ADMIN_EMAIL}`);
-    }
   } catch (emailError: any) {
-    console.error('Failed to send contact notification email:', emailError.message);
+    console.error('Failed to send contact notification email via Hostinger:', emailError.message);
   }
-  */
 
   // 4. Send to Google Sheets via Apps Script Webhook
   try {

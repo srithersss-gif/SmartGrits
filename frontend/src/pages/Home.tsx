@@ -148,8 +148,8 @@ const Home = () => {
                 {[
                   { value: '11+', label: 'Years of R&D' },
                   { value: '1000+', label: 'm² per day coverage' },
-                  { value: '12+', label: 'Marquee Clients' },
-                  { value: '3', label: 'Finish Types' },
+                  { value: '5000+', label: 'Marquee Clients' },
+                  { value: '10', label: 'Finish Types' },
                 ].map((stat, i) => (
                   <div key={i}>
                     <div className="text-3xl font-black">{stat.value}</div>
